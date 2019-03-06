@@ -9,11 +9,11 @@
     
 
     <a-scene ar>
-      
+
       <a-assets>
         <a-asset id="cesium-man" src="CesiumMan.glb"></a-asset>
       </a-assets>
-      <a-entity id="walker" gltf-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5" 
+      <a-entity camera id="walker" gltf-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5" 
       animation-mixer>
       </a-entity>
       <a-ring id="cursor" radius-inner="0.1" radius-outer="0.2"  
