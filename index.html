@@ -10,16 +10,28 @@
 <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
 <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
 <style>
-	body {
+	.center {
 		text-align : center;
 	}
-a {
+ a {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 30px;
+	color : black;
 }
 a :visited {
 	color : black;
+}
+.mail {
+	text-decoration: none;
+	color: white;
+	font-size : 20px;
+}
+
+.icone {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*ul {
   list-style-type: none;
@@ -34,13 +46,13 @@ a :visited {
 		<div class="flipbook">
 			<div style="background-image:url(pages/back.jpg)">
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<h1 style="font-weight : bold; color: cornsilk">EPONOU Felicia </h1>
+			<h1 style="font-weight : bold; color: cornsilk">Bienvenue sur mon portfolio, je suis EPONOU Felicia </h1>
 			<h2 style="font-weight : bold; color: cornsilk" >Développeuse Web & Mobile</h2>
-			<p style="font-weight : bold; color: cornsilk"> +225 09682009 / +225 45031341 <br> E-mail : fliciaroselinestaxy2@gmail.com <br>21 ans <br> Célibataire Sans Enfant</p>
+			<p style="font-weight : bold; color: cornsilk"> +225 09682009 / +225 45031341 <br> <a class="mail" href="mailto:fliciaroselinestaxy2@gmail.com">fliciaroselinestaxy2@gmail.com</a> <br>21 ans <br> Célibataire Sans Enfant</p>
 			</div>
-			<div >
-					<img src="pics/competence.png" alt="Compétences" width="100" >
-				<h1>Compétences professionnelles</h1>
+			<div style="background-image : linear-gradient(to right, rgb(255, 45, 161), white);" >
+					<img class="icone" src="pics/competence.png" alt="Compétences" width="100" >
+				<h1>Mes Compétences professionnelles</h1>
 				<ul>
 					<li>Sites internet</li>
 					<li>Applications mobiles</li>
@@ -48,8 +60,8 @@ a :visited {
 					<li>Jeux vidéos</li>
 				</ul>
 			</div>
-			<div >
-				<img src="pics/formation.png" alt="Formation" width="100" >
+			<div style="background-image : linear-gradient(to left, rgb(1, 255, 1), white);" >
+				<img class="icone" src="pics/formation.png" alt="Formation" width="100" >
 				<h1>Formation</h1>
 				<ul>
 						<li>
@@ -70,9 +82,9 @@ a :visited {
 					</li>
 				</ul>
 			</div>
-			<div >
-				<img src="pics/logiciels.png" alt="logiciels" width="100" >
-				<h1>Outils de travail</h1>
+			<div style="background-image : linear-gradient(to right, turquoise, white);">
+				<img class="icone" src="pics/logiciels.png" alt="logiciels" width="100" >
+				<h1>Mes Outils de travail</h1>
 				<ul>
 					<li>Visual Studio Code (HTML, CSS, Javascript, PHP)</li>
 					<li>Microsoft visual Studio (C#)</li>
@@ -84,9 +96,9 @@ a :visited {
 				</ul>
 			</div>
 
-			<div>
-					<img src="pics/loisirs.png" alt="Loisirs" width="100" >
-					<h1>Loisirs</h1>
+			<div style="background-image : linear-gradient(to left, yellow, white);" >
+					<img class="icone" src="pics/loisirs.png" alt="Loisirs" width="100" >
+					<h1>Mes Loisirs</h1>
 					<ul>
 						<li>Lecture </li>
 						<li>Jeu de Ludo</li>
@@ -94,8 +106,8 @@ a :visited {
 						<li>Films et séries télévisées</li>
 					</ul>
 			</div>
-			<div> 
-					<img src="pics/language.png" alt="Langues" width="100" >
+			<div style="background-image : linear-gradient(to right, rgb(192, 103, 252), white);" > 
+					<img class="icone" src="pics/language.png" alt="Langues" width="100" >
 					<h1>Langues</h1>
 					<ul>
 						<li>Agni</li>
@@ -103,9 +115,9 @@ a :visited {
 						<li>Français</li>
 					</ul>
 			</div>
-			<div>
-				<img src="pics/qualite.png" alt="Qualités" width="100" >
-					<h1>Qualités</h1>
+			<div style="background-image : linear-gradient(to left, rgb(196, 196, 196), white);">
+				<img class="icone" src="pics/qualite.png" alt="Qualités" width="100" >
+					<h1> Mes Qualités</h1>
 					<ul>
 						<li>Facilité de collaboration </li>
 						<li>Capacité à s’adapter à l’environnement de travail</li>
@@ -117,8 +129,26 @@ a :visited {
 						<li>Rigoureuse</li>
 					</ul>
 			</div>
+			<div style="background-image : linear-gradient(to right, red, white);">
+				<img class="icone" src="pics/faiblesses.png" alt="Faiblesses" width="100" >
+					<h1> Mes Faiblesses</h1>
+					<ul>
+						<li>Créer un design de site internet ou d'application de A à Z </li>
+					</ul>
+			</div>
+			<div class="reseau" style="background-image : linear-gradient(to left, yellow, white);">
+				<img class="icone" src="pics/realisations.png" alt="Réalisations" width="100" >
+					<h1>Mes réalisations</h1>
+					<ul>
+						<li><a href="http://feliciaeponou.github.io/liste_de_presence">Une plateforme d'inscription àune liste de présence</a> </li>
+						<li><a href="http://feliciaeponou.github.io/realite_augmentee">Un essai concernant la réalité augmentée pour le web</a> </li>
+						<li><a href="http://feliciaeponou.github.io/webGl">Un exemple d'animation 3d pour les sites internet</a> </li>
+						<li><a href="http://feliciaeponou.github.io/gouanou">Un site e-commerce de vente de produits vivriers</a> </li>
+						
+					</ul>
+			</div>
 			
-			<div >
+			<div class="center reseau"   >
 					<h1>Liens Réseaux sociaux</h1>
 				<table>
 						<tr>
@@ -189,6 +219,6 @@ yepnope({
 });
 
 </script>
-<marquee behavior="" direction="">Faites comme si vous voulez tourner une page </marquee>
+<marquee behavior="" direction="">Cliquez sur les bordures </marquee>
 </body>
 </html>
