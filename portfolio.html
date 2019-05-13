@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eponou Felicia</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<style>
+      body {
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: center;
+    perspective-origin: center;
+    overflow: hidden;
+    background-color: #222222;
+    width: 100vw;
+    height: 100vh;
+}
+
+body nav {
+    background: none;
+    position: relative;
+}
+
+body nav .button {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+body nav .button:nth-child(2) {
+    margin-left: 30px;
+}
+
+body nav #buttons .buttons-navi {
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+}
+
+body nav #buttons .buttons-navi .button {
+    width: 40px;
+    height: 40px;
+}
+
+body nav #buttons .buttons-navi .button span {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+}
+
+body nav #buttons .buttons-navi .button .button-next {
+    top: 8px;
+    left: 83px;
+}
+
+body nav #buttons .buttons-navi .button .button-prev {
+    top: 8px;
+    left: 8px;
+}
+
+body nav #buttons .buttons-menu {
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper {
+    position: relative;
+    right: -10px;
+    top: 15px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(1) {
+    top: 0px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(2) {
+    top: 12px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(3) {
+    top: 24px;
+}
+
+body nav #menu {
+    display: none;
+    background-color: black;
+    color: white;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    position: absolute;
+    z-index: 99;
+}
+
+body nav #menu ul {
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translateY(25vh);
+    transform: translateY(25vh);
+    padding-left: 0;
+}
+
+body nav #menu ul li {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    margin: 0 auto;
+    font-size: 40px;
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+    cursor: pointer;
+}
+
+#pages {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50% -50vw;
+    transform-origin: 50% 50% -50vw;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#pages section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    font-size: 50px;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#pages #main {
+    background-color: rgba(255, 217, 0, 0.8);
+}
+
+#pages #about {
+    background-color: rgba(255, 69, 0, 0.8);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translateZ(-100vw) rotateY(-180deg);
+    transform: translateZ(-100vw) rotateY(-180deg);
+}
+
+#pages #work {
+    -webkit-transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
+    transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
+    background-color: rgba(212, 255, 0, 0.8);
+}
+
+#pages #contact {
+    -webkit-transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
+    transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
+    background-color: rgba(170, 179, 179, 0.8);
+}
+    </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<nav>
+<section id="buttons">
+<article class="buttons-navi">
+<div class="button">
+<span class="button-prev glyphicon glyphicon-menu-left"></span>
+</div>
+<div class="button">
+<span class="button-next glyphicon glyphicon-menu-right"></span>
+</div>
+</article>
+<article class="buttons-menu">
+<div class="button">
+<div class="button-wrapper">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</article>
+</section>
+<section id="menu">
+<article class="menu-content">
+<ul>
+<li id="front">Main</li>
+<li id="right">Work</li>
+<li id="back">Réalisations</li>
+<li id="left"><i class="fa fa-phone" aria-hidden="true"></i>  Me Contacter</li>
+</ul>
+</article>
+</section>
+</nav>
+<main id="pages">
+<section id="main">
+<article class="main-content">
+Main
+</article>
+</section>
+<section id="about">
+<article class="about-content">
+About
+</article>
+</section>
+<section id="work">
+<article class="work-content">
+<img class="icone" src="pics/realisations.png" alt="Réalisations" width="100" >
+					<h1>Mes réalisations</h1>
+					<ul>
+						<li><a href="http://feliciaeponou.github.io/liste_de_presence">Une plateforme d'inscription à une liste de présence</a> </li>
+						<li><a href="http://feliciaeponou.github.io/realite_augmentee">Un essai concernant la réalité augmentée pour le web</a> </li>
+						<li><a href="http://feliciaeponou.github.io/webGl">Un exemple d'animation 3d pour les sites internet</a> </li>
+						<li><a href="http://feliciaeponou.github.io/eponoushopping">Un site e-commerce de vente de produits vivriers</a> </li>
+						
+					</ul>
+</article>
+</section>
+<section id="contact">
+<article class="contact-content">
+<table>
+						<tr>
+								<td></td>
+								<td><a href="https://feliciaeponou.github.io/cv.pdf">Mon Curriculum vitæ</a></td>
+							</tr>
+						<tr>
+								<td><img src="pics/linkedin.png" alt="Linkedin" width="100" class="img img-circle"></td>
+								<td><a href="https://www.linkedin.com/in/felicia-eponou-842095176/">Félicia Eponou</a></td>
+							</tr>
+					<tr>
+						<td><img src="pics/facebook.png" alt="Facebook" width="100" class="img img-circle"></td>
+						<td><a href="https://www.facebook.com/feliciaroseline.staxy">Attiah Félicia Eponou</a></td>
+					</tr>
+					<tr>
+							<td><img src="pics/twitter.png" alt="Twitter" width="100" class="img img-circle" ></td>
+							<td> <a href="http://twitter.com/Felicia_07_03">Felicia_07_03</a> </td>
+					</tr>
+					<tr>
+							<td><img src="pics/instagram.png" alt="instagram" width="100" class="img img-circle"></td>
+							<td> <a href="http://www.instagram.com/felicia_eponou03/">felicia_eponou03</a> </td>
+					</tr>
+					<tr>
+							<td><img src="pics/github.png" alt="Github" width="100" class="img img-circle" ></td>
+							<td> <a href="http://github.com/Line03"> Line03</a> </td>
+					</tr>
+				</table>
+</article>
+</section>
+</main>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdn.jsdelivr.net/velocity/1.0.0/velocity.min.js'></script>
+<script id="rendered-js">
+      function PageTransitions() {
+  const pages = $('#pages');
+
+  const positions = {
+    front: 0,
+    right: -90,
+    back: 180,
+    left: 90 };
+
+
+  const getCurrentTransform = () => {
+    let currentTransform = pages[0].style.transform.match(/-?\d+/g) || 0;
+    currentTransform !== 0 ? currentTransform = parseInt(currentTransform[0]) : currentTransform = 0;
+    return currentTransform;
+  };
+
+  const moveCube = page => {
+    let target = positions[page];
+    animateCube(target);
+  };
+
+  const changePage = direction => {
+    let veloIsAnimating = pages.attr('class');
+    let end = direction === 1 ? -360 : 360;
+    let step = direction === 1 ? 90 : -90;
+    if (!veloIsAnimating) {
+      let current = getCurrentTransform();
+      if (current === end) {
+        pages.velocity(
+        {
+          rotateY: [0] },
+
+        {
+          duration: 0,
+          complete: () => {
+            current = getCurrentTransform();
+            let target = current + step;
+            animateCube(target);
+          } });
+
+
+      } else {
+        let target = current + step;
+        animateCube(target);
+      }
+    }
+  };
+
+  const animateCube = target => {
+    pages.velocity(
+    {
+      rotateY: [target] },
+
+    {
+      duration: 2000,
+      easing: "easeOut" });
+
+
+  };
+
+  return {
+    change: changePage,
+    move: moveCube };
+
+}
+
+function Navigation(pagestrs) {
+  const nav = $('nav');
+  const buttons = nav.find('#buttons');
+  const menu = nav.find('#menu');
+  const buttonsNavi = buttons.find('.buttons-navi');
+  const buttonPrev = buttonsNavi.find('.button:nth-child(1)');
+  const buttonNext = buttonsNavi.find('.button:nth-child(2)');
+  const buttonNextContent = buttonNext.find('.button-next');
+  const buttonPrevContent = buttonPrev.find('.button-prev');
+  const buttonMenu = buttons.find('.buttons-menu .button');
+  const menuItems = menu.find('li');
+  const buttonMenuContent = buttonMenu.find('.button-wrapper');
+  const topSpan = buttonMenuContent.find('span:nth-child(1)');
+  const middleSpan = buttonMenuContent.find('span:nth-child(2)');
+  const bottomSpan = buttonMenuContent.find('span:nth-child(3)');
+  const spans = [topSpan, middleSpan, bottomSpan];
+
+  const windowOnUnload = fn => {
+    const unload = () => {
+      fn();
+      window.removeEventListener('unload', unload);
+    };
+    window.addEventListener('unload', unload);
+  };
+
+  const animateChangePageButton = () => {
+    const animateContent = event => {
+      event.data.object.velocity(
+      {
+        scale: [1, 0] },
+
+      {
+        duration: 1000,
+        easing: 'spring' });
+
+
+    };
+
+    buttonNext.on('mouseenter', { object: buttonNextContent }, animateContent);
+    windowOnUnload(() => {
+      buttonNext.off('mouseenter', animateContent);
+    });
+
+    buttonPrev.on('mouseenter', { object: buttonPrevContent }, animateContent);
+    windowOnUnload(() => {
+      buttonPrev.off('mouseenter', animateContent);
+    });
+  };
+
+  const handleNextPageClick = () => {
+    const buttonNext = buttons.find('.buttons-navi .button:nth-child(2)');
+    const clickEvent = () => {
+      pagestrs.change(0);
+    };
+    buttonNext.on('click', clickEvent);
+    windowOnUnload(() => {
+      buttonNext.off('click', clickEvent);
+    });
+  };
+
+  const handlePrevPageClick = () => {
+    const buttonPrev = buttons.find('.buttons-navi .button:nth-child(1)');
+    const clickEvent = () => {
+      pagestrs.change(1);
+    };
+    buttonPrev.on('click', clickEvent);
+    windowOnUnload(() => {
+      buttonPrev.off('click', clickEvent);
+    });
+  };
+
+  const animateManuButton = () => {
+    topSpan.velocity(
+    {
+      rotateZ: '135deg',
+      top: '12px' },
+
+    {
+      duration: 300 });
+
+
+    middleSpan.velocity(
+    {
+      right: '40px',
+      opacity: 0 },
+
+    {
+      duration: 300 });
+
+
+    bottomSpan.velocity(
+    {
+      rotateZ: '-135deg',
+      top: '12px' },
+
+    {
+      duration: 300 });
+
+
+  };
+
+  const reverseManuButtonAnimation = () => {
+    spans.forEach(span => {
+      span.velocity('reverse');
+    });
+  };
+
+  const menuIn = () => {
+    buttonsNavi.hide();
+    menu.show();
+    menu.velocity(
+    {
+      translateY: [0, -180],
+      scale: [1, 0],
+      opacity: [1, 0] },
+
+    {
+      duration: 2000,
+      easing: "spring" });
+
+
+  };
+
+  const menuOut = () => {
+    buttonsNavi.show();
+    menu.velocity(
+    "reverse",
+    {
+      duration: 1000,
+      easing: "spring",
+      complete: () => {
+        menu.hide();
+      } });
+
+
+  };
+
+  const menuItemsIn = () => {
+    let delay = 200;
+    menuItems.each((key, item) => {
+      let it = $(item);
+      it.show();
+      it.velocity(
+      {
+        translateX: ["0vw", "-100vw"],
+        backgroundColorAlpha: [0, 1] },
+
+      {
+        duration: 2000,
+        easing: "spring",
+        delay: delay });
+
+
+      delay += 200;
+    });
+  };
+
+  const naviInSeq = () => {
+    const seq = [
+    animateManuButton,
+    menuIn,
+    menuItemsIn];
+
+    seq.forEach(anim => {
+      anim();
+    });
+  };
+
+  const naviOutSeq = () => {
+    const seq = [
+    reverseManuButtonAnimation,
+    menuOut];
+
+    seq.forEach(anim => {
+      anim();
+    });
+  };
+
+  const handleMenuButtonClick = () => {
+    const handleToggle = () => {
+      let veloIsAnimating = menu.attr('class');
+      if (!veloIsAnimating) {
+        let opacity = parseInt(middleSpan.css('opacity'));
+        if (opacity === 1) {
+          naviInSeq();
+        } else {
+          naviOutSeq();
+        }
+      }
+    };
+    buttonMenu.on('click', handleToggle);
+    windowOnUnload(() => {
+      buttonMenu.off('click', handleToggle);
+    });
+  };
+
+  const menuItemClickSeq = [
+  reverseManuButtonAnimation,
+  menuOut,
+  pagestrs.move];
+
+
+  const handleManuItemClick = () => {
+    const clickEvent = id => {
+      menuItemClickSeq.forEach(anim => {
+        anim(id);
+      });
+    };
+
+    menuItems.each((key, item) => {
+      let it = $(item);
+      it.on('click', () => {
+        clickEvent(it[0].id);
+      });
+      windowOnUnload(() => {
+        it.off('click');
+      });
+    });
+  };
+
+  return {
+    animateChangePageButton: animateChangePageButton,
+    nextPage: handleNextPageClick,
+    prevPage: handlePrevPageClick,
+    menuButtonClick: handleMenuButtonClick,
+    menuItemClick: handleManuItemClick };
+
+}
+
+function Apx(navigation, pagesTransition) {
+  const pagesTrs = new pagesTransition();
+  const navi = new navigation(pagesTrs);
+
+  const domOnLoad = fn => {
+    const unload = () => {
+      window.removeEventListener('DOMContentLoaded', fn);
+      window.removeEventListener('unload', unload);
+    };
+    window.addEventListener('DOMContentLoaded', fn);
+    window.addEventListener('unload', unload);
+  };
+
+  const init = () => {
+    const onInit = Object.values(navi);
+    onInit.forEach(fn => {
+      domOnLoad(fn);
+    });
+  };
+  return {
+    init: init };
+
+}
+
+const app = new Apx(Navigation, PageTransitions);
+app.init();
+      //# sourceURL=pen.js
+    </script>
+</body>
+</html>
