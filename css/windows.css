@@ -42,8 +42,8 @@ a.wide, a.box{
 }
 
 a.wide h2, a.box h2{
-	position: relative;;
-	bottom:0;
+	position:absolute;
+	bottom:5px;
 	font-size:14px;
 }
 
