@@ -1,0 +1,26 @@
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 24%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  font-size: 15px;
+  padding: 15px;
+  text-align: center;
+}
+div.desc h5 {
+  color : rgb(255, 255, 255);
+  font-weight : bolder;
+  font-family: fantasy;
+}

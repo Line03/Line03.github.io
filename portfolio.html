@@ -1,189 +1,24 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Eponou Felicia</title>
+<link rel="stylesheet" href="css/card.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" href="css/transition_cube.css">
+<link rel="stylesheet" href="css/windows.css">
+
 <style>
-      body {
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    -webkit-perspective-origin: center;
-    perspective-origin: center;
-    overflow: hidden;
-    background-color: #222222;
-    width: 100vw;
-    height: 100vh;
+h2 { color: #00ff95; font-family: "Great Vibes", cursive ; font-size: 50px; line-height: 60px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; }
+
+a {
+  text-decoration: none;
+  font-size : 10px;
 }
 
-body nav {
-    background: none;
-    position: relative;
-}
-
-body nav .button {
-    width: 60px;
-    height: 60px;
-    margin: 0;
-    background-color: black;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-body nav .button:nth-child(2) {
-    margin-left: 30px;
-}
-
-body nav #buttons .buttons-navi {
-    z-index: 100;
-    position: absolute;
-    top: 10px;
-    margin-left: 10px;
-}
-
-body nav #buttons .buttons-navi .button {
-    width: 40px;
-    height: 40px;
-}
-
-body nav #buttons .buttons-navi .button span {
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    position: absolute;
-}
-
-body nav #buttons .buttons-navi .button .button-next {
-    top: 8px;
-    left: 83px;
-}
-
-body nav #buttons .buttons-navi .button .button-prev {
-    top: 8px;
-    left: 8px;
-}
-
-body nav #buttons .buttons-menu {
-    z-index: 100;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-body nav #buttons .buttons-menu .button-wrapper {
-    position: relative;
-    right: -10px;
-    top: 15px;
-}
-
-body nav #buttons .buttons-menu .button-wrapper span {
-    display: block;
-    width: 40px;
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-    position: absolute;
-}
-
-body nav #buttons .buttons-menu .button-wrapper span:nth-child(1) {
-    top: 0px;
-}
-
-body nav #buttons .buttons-menu .button-wrapper span:nth-child(2) {
-    top: 12px;
-}
-
-body nav #buttons .buttons-menu .button-wrapper span:nth-child(3) {
-    top: 24px;
-}
-
-body nav #menu {
-    display: none;
-    background-color: black;
-    color: white;
-    -webkit-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-    position: absolute;
-    z-index: 99;
-}
-
-body nav #menu ul {
-    list-style: none;
-    width: 100vw;
-    height: 100vh;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: translateY(25vh);
-    transform: translateY(25vh);
-    padding-left: 0;
-}
-
-body nav #menu ul li {
-    display: none;
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-transform-origin: left;
-    transform-origin: left;
-    margin: 0 auto;
-    font-size: 40px;
-    -webkit-transform: translateX(-100vw);
-    transform: translateX(-100vw);
-    cursor: pointer;
-}
-
-#pages {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50% -50vw;
-    transform-origin: 50% 50% -50vw;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-#pages section {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    font-size: 50px;
-    margin: auto 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
-
-#pages #main {
-    background-color: rgba(255, 217, 0, 0.8);
-}
-
-#pages #about {
-    background-color: rgba(255, 69, 0, 0.8);
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: translateZ(-100vw) rotateY(-180deg);
-    transform: translateZ(-100vw) rotateY(-180deg);
-}
-
-#pages #work {
-    -webkit-transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
-    transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
-    background-color: rgba(212, 255, 0, 0.8);
-}
-
-#pages #contact {
-    -webkit-transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
-    transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
-    background-color: rgba(170, 179, 179, 0.8);
-}
-    </style>
+</style>
 <script>
   window.console = window.console || function(t) {};
 </script>
@@ -217,41 +52,113 @@ body nav #menu ul li {
 <section id="menu">
 <article class="menu-content">
 <ul>
-<li id="front">Main</li>
-<li id="right">Work</li>
-<li id="back">Réalisations</li>
-<li id="left"><i class="fa fa-phone" aria-hidden="true"></i>  Me Contacter</li>
+<li id="front"><i class="fa fa-home" aria-hidden="true"></i>   Accueil</li>
+<li id="right"><i class="fa fa-mobile" aria-hidden="true"></i>   Sites internet réalisés</li>
+<li id="back"><i class="fa fa-desktop" aria-hidden="true"></i>    Applications Mobiles réalisées</li>
+<li id="left"><i class="fa fa-phone" aria-hidden="true"></i>   Me Contacter</li>
 </ul>
 </article>
 </section>
 </nav>
 <main id="pages">
-<section id="main">
+<section id="main" style="background : url('pics/back_main1.png') no-repeat fixed center ; background-size: cover;">
 <article class="main-content">
-Main
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2>
+            Passionnée du développement mobile 😍,  Addicte de la recherche Google 😅, et une amoureuse de JavaScript 😊 .
+        </h2>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  
 </article>
 </section>
-<section id="about">
+<section id="about" style="background-color: #d22a4e;">
 <article class="about-content">
-About
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+<h1 style="font-family : fantasy ; font-weight : 1000; text-align: center;">Dernières applications Mobiles réalisées</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" >
+            <div class="gallery">
+                <a href="http://feliciaeponou.github.io/liste_de_presence">
+                  <img src="pages/6.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc"><h5> Une plateforme d'inscription à une liste de présence</h5></div>
+              </div>
+              <div class="gallery">
+                  <a href="http://feliciaeponou.github.io/realite_augmentee">
+                    <img src="pages/7.jpg" alt="Cinque Terre" width="600" height="400">
+                  </a>
+                  <div class="desc"> <h5>Un essai concernant la réalité augmentée pour le web</h5> </div>
+                </div>
+                <div class="gallery">
+                    <a href="http://feliciaeponou.github.io/webGl">
+                      <img src="pages/8.jpg" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc"> <h5>Un exemple d'animation 3d pour les sites internet</h5> </div>
+                  </div>
+                  <div class="gallery">
+                      <a href="http://feliciaeponou.github.io/eponoushopping">
+            <img src="pages/9.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc"> <h5>Un site e-commerce de vente de produits vivriers</h5> </div>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
 </article>
 </section>
-<section id="work">
+<section id="work" style="background-color : #61b812">
 <article class="work-content">
-<img class="icone" src="pics/realisations.png" alt="Réalisations" width="100" >
-					<h1>Mes réalisations</h1>
-					<ul>
-						<li><a href="http://feliciaeponou.github.io/liste_de_presence">Une plateforme d'inscription à une liste de présence</a> </li>
-						<li><a href="http://feliciaeponou.github.io/realite_augmentee">Un essai concernant la réalité augmentée pour le web</a> </li>
-						<li><a href="http://feliciaeponou.github.io/webGl">Un exemple d'animation 3d pour les sites internet</a> </li>
-						<li><a href="http://feliciaeponou.github.io/eponoushopping">Un site e-commerce de vente de produits vivriers</a> </li>
-						
-					</ul>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h1 style="font-family : fantasy ; font-weight : 1000; text-align: center;">Derniers Sites internet réalisés</h1>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" >
+        <div class="gallery">
+            <a href="http://feliciaeponou.github.io/liste_de_presence">
+              <img src="pages/2.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc"><h5> Une plateforme d'inscription à une liste de présence</h5></div>
+          </div>
+          <div class="gallery">
+              <a href="http://feliciaeponou.github.io/realite_augmentee">
+                <img src="pages/3.jpg" alt="Cinque Terre" width="600" height="400">
+              </a>
+              <div class="desc"> <h5>Un essai concernant la réalité augmentée pour le web</h5> </div>
+            </div>
+            <div class="gallery">
+                <a href="http://feliciaeponou.github.io/webGl">
+                  <img src="pages/4.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc"> <h5>Un exemple d'animation 3d pour les sites internet</h5> </div>
+              </div>
+              <div class="gallery">
+                  <a href="http://feliciaeponou.github.io/eponoushopping">
+        <img src="pages/5.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc"> <h5>Un site e-commerce de vente de produits vivriers</h5> </div>
+    </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
 </article>
 </section>
-<section id="contact">
+<section id="contact" style="background-color : rgba(11, 141, 141, 0.8) ;">
 <article class="contact-content">
-<table>
+<!-- <table>
 						<tr>
 								<td></td>
 								<td><a href="https://feliciaeponou.github.io/cv.pdf">Mon Curriculum vitæ</a></td>
@@ -276,7 +183,80 @@ About
 							<td><img src="pics/github.png" alt="Github" width="100" class="img img-circle" ></td>
 							<td> <a href="http://github.com/Line03"> Line03</a> </td>
 					</tr>
-				</table>
+        </table> -->
+
+        <div class="container">
+            <h1>Start</h1>
+            
+            <img src="https://graph.facebook.com/freakout.jq/picture?type=small" width="50px" class="prof"/>
+            <div class="right">
+              
+            </div>
+            <div class='spacer'>
+                <a href="javascript://" class='wide transparent'>
+                  <!-- <i class="icon-home"></i>
+                  <h2>Show Desktop</h2> -->
+                </a>
+                <a href="javascript://" class='wide transparent'>
+                  <!-- <i class="icon-cog"></i>
+                  <h2>Settings</h2> -->
+                </a>
+                <a href="javascript://" class='wide transparent'>
+                  <h2 style="font-size : 50px;"> Liens</h2>
+                </a>
+                <a href="javascript://" class='wide transparent'>
+                  <h2 style="font-size : 50px;"> réseaux</h2>
+                </a>
+                <a href="http://twitter.com/Felicia_07_03" class='wide bluefish'>
+                  <i class="icon-twitter"></i>
+                  <h2></h2>
+                </a>
+                <a href="http://www.instagram.com/felicia_eponou03/" class='wide yellow'>
+                  <i class="fab fa-instagram"></i>
+                  <h2></h2>
+                </a>
+                <a href="https://www.linkedin.com/in/felicia-eponou-842095176/" class='wide magenta'>
+                  <i class="icon-linkedin"></i>
+                  <h2></h2>
+                </a>
+                <a href="http://github.com/feliciaeponou" class='wide redgay'>
+                  <i class="icon-github"></i>
+                  <h2></h2>
+                </a>
+                <a href="javascript://" class='wide transparent'>
+                  <!-- <i class="icon-envelope-alt"></i>
+                  <h2>E-mail</h2> -->
+                </a>
+                <a href="javascript://" class='wide transparent cal_e'>
+                  <!-- <h1>25</h1><p>Monday</p>
+                  <h2 class="top cal_i">Sena Birthday Party At Jack House on 07:00 PM</h2>
+                  <i class="icon-calendar"></i> -->
+                </a>
+                <a href="javascript://" class='wide transparent'>
+                  <!-- <i class="icon-cloud"></i>
+                  <h2>SkyDrive</h2> -->
+                </a>
+            </div>
+        
+            <div class='spacer spacer3x'>
+                <a href="javascript://" class='box transparent'></a>
+                <a href="javascript://" class='box transparent'></a>
+                <!-- <a href="javascript://" class='box transparent'></a> -->
+                <a href="javascript://" class='wide transparent'>
+                <h2 style="font-size : 50px;">Sociaux</h2></a>
+              <a href="https://www.facebook.com/feliciaroseline.staxy" class='wide bluefish'>
+                <i class="icon-facebook"></i>
+                <h2></h2>
+              </a>
+                <a href="https://feliciaeponou.github.io/cv.pdf" class='wide redgay'>
+                <i class="icon-user"></i>
+                <h2 style="font-size : 20px; color : rgb(255, 255, 255); font-weight: 1000;">Mon Curriculum Vitae</h2>
+              </a>
+            </div>
+        
+          </div>
+        
+        
 </article>
 </section>
 </main>
