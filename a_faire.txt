@@ -1,0 +1,2 @@
+Ajuster la photo pour desktop
+rendre le portfolio responsive
