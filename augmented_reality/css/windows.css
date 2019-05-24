@@ -7,6 +7,7 @@ body{
   margin:0px;
   padding:0px;
 	font-family: "Open Sans", arial;
+	background:#0f6d39;
 	color:#fff;
 	font-weight:300;
 }
@@ -88,7 +89,7 @@ a.wide:active, a.box:active{
 .lime{background:#61b812;}
 .orange{background:#e76022;}
 .blue{background:#1E90FF;}
-.redgay{background:rgb(0, 0, 0);}
+.redgay{background:#DA312E;}
 .yellow{background:#dbb701;}
 .bluefish{background:#02b9e3;}
 .magenta{background:#d22a4e;}

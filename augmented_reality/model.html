@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Hello, world!</title>
+	<title>Eponou Felicia</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<script src='js/OBJLoader.js'></script>
@@ -127,16 +127,16 @@ function initialize()
 	
 	new THREE.MTLLoader()
 		.setPath( 'models/' )
-		.load( 'cup1.mtl', function ( materials ) {
+		.load( 'can.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
 				.setPath( 'models/' )
-				.load( 'cup1.obj', function ( group ) {
+				.load( 'can.obj', function ( group ) {
 					mesh0 = group.children[0];
 					mesh0.material.side = THREE.DoubleSide;
-					mesh0.rotation.y += 1;
-					mesh0.position.y = 0.25;
+					mesh0.position.y = 1;
+					//mesh0.rotation.z += 2 ;
 					mesh0.scale.set(0.25,0.25,0.25);
 					markerRoot1.add(mesh0);
 				}, onProgress, onError );
@@ -146,6 +146,7 @@ function initialize()
 
 function update()
 {
+	mesh0.rotation.z += 0.03;
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
 		arToolkitContext.update( arToolkitSource.domElement );
