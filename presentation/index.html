@@ -32,6 +32,7 @@ body {
 .body {
 	width: 98%;
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 .body .card {
   width: 800px;
@@ -161,10 +162,7 @@ body {
     <!-- Summary Style -->
 
     <style>
-    /* body { 
-	background: #EEE; 
-	overflow-x:hidden;
-} */
+   
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -240,7 +238,7 @@ body {
   display: block;
   text-decoration: none;
   padding: 12px 20px;
-  color: #777;
+  color: rgb(0, 0, 0);
   /*text-align: center;
   border-right: 1px solid #E7E7E7;*/
   
@@ -314,22 +312,22 @@ body {
 }
 
 .mcd-menu li:hover > a {
-  color: #e67e22;
+  color: rgba(253, 18, 108, 0.55);
 }
 .mcd-menu li a.active {
   position: relative;
-  color: #e67e22;
+  color: rgba(253, 18, 108, 0.55);
   border:0;
-  /*border-top: 4px solid #e67e22;
-  border-bottom: 4px solid #e67e22;
+  /*border-top: 4px solid rgba(253, 18, 108, 0.55);
+  border-bottom: 4px solid rgba(253, 18, 108, 0.55);
   margin-top: -4px;*/
-  box-shadow: 0 0 5px #DDD;
-  -moz-box-shadow: 0 0 5px #DDD;
-  -webkit-box-shadow: 0 0 5px #DDD;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  -moz-box-shadow: 0 0 5px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 5px rgb(0, 0, 0);
   
   /* == */
-  border-left: 4px solid #e67e22;
-  border-right: 4px solid #e67e22;
+  border-left: 4px solid rgba(253, 18, 108, 0.55);
+  border-right: 4px solid rgba(253, 18, 108, 0.55);
   margin: 0 -4px;
   /* == */
 }
@@ -338,14 +336,14 @@ body {
   position: absolute;
   /*top: 0;
   left: 45%;
-  border-top: 5px solid #e67e22;
+  border-top: 5px solid rgba(253, 18, 108, 0.55);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;*/
   
   /* == */
   top: 42%;
   left: 0;
-  border-left: 5px solid #e67e22;
+  border-left: 5px solid rgba(253, 18, 108, 0.55);
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   /* == */
@@ -357,7 +355,7 @@ body {
   position: absolute;
   top: 42%;
   right: 0;
-  border-right: 5px solid #e67e22;
+  border-right: 5px solid rgba(253, 18, 108, 0.55);
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
@@ -428,7 +426,7 @@ body {
   padding: 0;
   margin: 0;
   background: #FFF;
-  /*border-top: 4px solid #e67e22;*/
+  /*border-top: 4px solid rgba(253, 18, 108, 0.55);*/
   opacity: 0;
   visibility: hidden;
   transition: all 300ms linear;
@@ -442,7 +440,7 @@ body {
   /* == */
   left:280px;
   top: 0px;
-  border-left: 4px solid #e67e22;
+  border-left: 4px solid rgba(253, 18, 108, 0.55);
   /* == */
 }
 .mcd-menu li ul:before {
@@ -450,14 +448,14 @@ body {
   position: absolute;
   /*top: -8px;
   left: 23%;
-  border-bottom: 5px solid #e67e22;
+  border-bottom: 5px solid rgba(253, 18, 108, 0.55);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;*/
   
   /* == */
   top: 25px;
   left: -9px;
-  border-right: 5px solid #e67e22;
+  border-right: 5px solid rgba(253, 18, 108, 0.55);
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
   /* == */
@@ -495,7 +493,7 @@ body {
   left: 230px;
   top: 0;
   border: 0;
-  border-left: 4px solid #e67e22;
+  border-left: 4px solid rgba(253, 18, 108, 0.55);
 }  
 .mcd-menu li ul li ul:before {
   content: "";
@@ -505,7 +503,7 @@ body {
   /* == */
   left: -9px;
   /* == */
-  border-right: 5px solid #e67e22;
+  border-right: 5px solid rgba(253, 18, 108, 0.55);
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
 }
@@ -529,48 +527,6 @@ body {
   display: inline-block;
   font-size: 18px;
 }
-.mcd-menu li a.search input {
-  border: 1px solid #EEE;
-  padding: 10px;
-  background: #FFF;
-  outline: none;
-  color: #777;
-  
-  /* == */
-  width:170px;
-  float:left;
-  /* == */
-}
-.mcd-menu li a.search button {
-  border: 1px solid #e67e22;
-  /*padding: 10px;*/
-  background: #e67e22;
-  outline: none;
-  color: #FFF;
-  margin-left: -4px;
-  
-  /* == */
-  float:left;
-  padding: 10px 10px 11px 10px;
-  /* == */
-}
-.mcd-menu li a.search input:focus {
-  border: 1px solid #e67e22;
-}
-
-
-.search-mobile { 
-	display:none !important;
-	background:#e67e22;
-	border-left:1px solid #e67e22;
-	border-radius:0 3px 3px 0;
-}
-.search-mobile i { 
-	color:#FFF; 
-	margin:0 !important;
-}
-
-
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
     .mcd-menu {
 		margin-left:10px;
@@ -597,7 +553,7 @@ body {
 		width: 120px;
 		font-size: 12px;
 	}
-	.mcd-menu li a.search buton{
+	.mcd-menu li a.search button{
 		padding: 8px 10px 9px 10px;
 	}
 	.mcd-menu li > ul {
@@ -649,7 +605,7 @@ body {
 		position:absolute;
 		bottom:0px;
 		left:0;
-		background:#e67e22;
+		background:rgba(253, 18, 108, 0.55);
 		color:#FFF;
 		min-width:100%;
 		text-transform:lowercase;
@@ -679,13 +635,13 @@ body {
 		left:35px;
 		top: 45px;
 		border:0;
-		border-top:4px solid #e67e22;
+		border-top:4px solid rgba(253, 18, 108, 0.55);
 	}
 	.mcd-menu li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
-		border-bottom:5px solid #e67e22;
+		border-bottom:5px solid rgba(253, 18, 108, 0.55);
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}
@@ -725,7 +681,7 @@ body {
 		position:absolute;
 		bottom:0px;
 		left:0;
-		background:#e67e22;
+		background:rgba(253, 18, 108, 0.55);
 		color:#FFF;
 		min-width:100%;
 		text-transform:lowercase;
@@ -755,13 +711,13 @@ body {
 		left:35px;
 		top: 45px;
 		border:0;
-		border-top:4px solid #e67e22;
+		border-top:4px solid rgba(253, 18, 108, 0.55);
 	}
 	.mcd-menu li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
-		border-bottom:5px solid #e67e22;
+		border-bottom:5px solid rgba(253, 18, 108, 0.55);
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}
@@ -806,11 +762,13 @@ body {
         </section>
         <!-- Summary Page -->
 				<section>
+          <div class="body">
+            <h1 style="color : #fff ; font-size : 50px; text-align : left;">Summary</h1>
           <div class="container">
             <nav>
                 <ul class="mcd-menu">
                   <li>
-                    <a href="">
+                    <a href="" class="active">
                       <i class="fa fa-home"></i>
                       <strong>About Me </strong>
                       </a>
@@ -831,7 +789,7 @@ body {
                       </ul>
                   </li>
                   <li>
-                    <a href="" class="active">
+                    <a href="" >
                       <i class="fa fa-edit"></i>
                       <strong>Ecolowash Presentation</strong>
                     </a>
@@ -889,7 +847,113 @@ body {
                 </ul>
               </nav>
             </div>
+          </div>
         </section>
+
+
+        <!-- About Me Section -->
+        <section>
+          <!-- Scolar Career -->
+          <section>
+            <div class="body">
+                <h1 style="color : #fff ; font-size : 50px; text-align : center;">Scholar Career</h1>
+            </div>
+          </section>
+          <!-- Professional Career -->
+          <section>
+            <div class="body">
+              <h1 style="color : #fff ; font-size : 50px; text-align : center;">Professional Career</h1>
+            </div>
+          </section>
+          <!-- Hobbies -->
+          <section>
+              <div class="body">
+              <h1 style="color : #fff ; font-size : 50px; text-align : center;">Hobbies</h1>
+            </div>
+          </section>
+          <!-- Languages -->
+          <section>
+              <div class="body">
+              <h1 style="color : #fff ; font-size : 50px; text-align : center;">Languages</h1>
+            </div>
+          </section>
+        </section>
+
+
+        <!-- Ecolowash Presentation Section -->
+        <section>
+            <!-- Context -->
+            <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">Ecolowash Presentation</h1>
+              </div>
+            </section>
+            <!-- Products They Use -->
+            <section>
+              <div class="body">
+                <h1 style="color : #fff ; font-size : 50px; text-align : center;">Products They Use</h1>
+              </div>
+            </section>
+            <!-- Their Goal -->
+            <section>
+                <div class="body">
+                <h1 style="color : #fff ; font-size : 50px; text-align : center;">Their Goal</h1>
+              </div>
+            </section>
+          </section>
+
+          <!-- Project Presentation -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">Project Presentation</h1>
+                </div>
+          </section>
+
+           <!-- My Job On The Project -->
+           <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">My Job On The Project</h1>
+                </div>
+          </section>
+
+
+          <!-- Programming Languages  -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">Programming Languages I Use</h1>
+                </div>
+          </section>
+
+          <!-- What Is Done -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">What Is Done ?</h1>
+                </div>
+          </section>
+
+
+          <!-- What Must Be Done -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">What Must Be Done </h1>
+                </div>
+          </section>
+
+          <!-- Difficulties Encountered -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">Difficulties Encountered</h1>
+                </div>
+          </section>
+
+
+          <!-- Conclusion -->
+          <section>
+              <div class="body">
+                  <h1 style="color : #fff ; font-size : 50px; text-align : center;">Conclusion</h1>
+                </div>
+          </section>
+
 			</div>
 		</div>
 
