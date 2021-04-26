@@ -6,12 +6,13 @@
  
  // Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
  var textArray = [
- "Welcome to my portfolio",
- "I am 21 years old and... ",
- "I am an Ivorian girl | Who loves her country",
- "I am single, without children",
- "Tel : +225 09 68 20 09",
- "Mail : fliciaroselinestaxy2@gmail.com"];
+ "Welcome to my portfolio...",
+//  "I am 23 years old and... ",
+//  "I am an Ivorian girl | Who loves her country",
+//  "I am single, with one beautiful daughter",
+//  "Tel : +225 09 68 20 09",
+//  "Mail : fliciaroselinestaxy2@gmail.com"
+];
  
  
  // Speed (in milliseconds) of typing.
@@ -89,7 +90,7 @@
        i = 0;
        isParagraph = false;
        a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
-       setTimeout(function () {typeWriter(id, ar);}, 50);
+       setTimeout(function () {typeWriter(id, ar);}, 5);
  
      }
    }

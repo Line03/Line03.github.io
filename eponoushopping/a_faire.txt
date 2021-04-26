@@ -1,6 +1,0 @@
-Base de données 
-table user : devise 
-table produit : pour un produit on a 4 images
-Ajouter une barre de recherche sur la page d'accueil
-
-

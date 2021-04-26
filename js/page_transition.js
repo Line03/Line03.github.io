@@ -134,7 +134,7 @@ $(document).ready(function () {
     function initialLoader() {
       $('body').removeClass('noscroll');
   
-      var loadText = 'Warning: My name is Eponou Felicia. And I am a web and mobile developer ...';
+      var loadText = 'Warning: My name is Felicia Eponou. And I am a web and mobile developer ...';
       var loaderDone = false;
       $.each(loadText.split(''), function (i, letter) {
         setTimeout(function () {
@@ -144,7 +144,7 @@ $(document).ready(function () {
   
       setTimeout(function () {
         loaderDone = true;
-      }, 6000);
+      }, 7000);
   
   
       //check to make sure the document has been fully loaded before removing loader
@@ -366,7 +366,7 @@ $(document).ready(function () {
     }
     setTimeout(function () {
       document.location.replace('portfolio.html');
-      }, 60000);
+      }, 15000);
     
   });
         //# sourceURL=pen.js
